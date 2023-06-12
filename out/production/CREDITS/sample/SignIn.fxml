@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="327.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignIn">
+    <children>
+        <PasswordField fx:id="tfPassword" layoutX="77.0" layoutY="208.0" promptText="Password">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="14.0" />
+            </font>
+        </PasswordField>
+        <TextField fx:id="tfUser" layoutX="77.0" layoutY="169.0" promptText="Username">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="14.0" />
+            </font>
+        </TextField>
+        <Button fx:id="btnSignIn" layoutX="123.0" layoutY="274.0" mnemonicParsing="false" onAction="#signIn" prefHeight="30.0" prefWidth="81.0" text="Войти">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="14.0" />
+            </font>
+        </Button>
+        <Label fx:id="lblMessage" alignment="CENTER" layoutX="57.0" layoutY="129.0" prefHeight="17.0" prefWidth="213.0" textFill="#003cff">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="14.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="84.0" fitWidth="87.0" layoutX="122.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@lock.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="328.0" prefWidth="363.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Menu">
+    <children>
+        <ToolBar prefHeight="40.0" prefWidth="363.0">
+            <items>
+                <MenuButton fx:id="btnClients" mnemonicParsing="false" onAction="#formClients" style="-fx-background-color: transparent;" text="Клиенты">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#formClients" text="Данные о клиента" />
+                    </items>
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </MenuButton>
+            <MenuButton fx:id="btnDogovora" mnemonicParsing="false" onAction="#formDogovor" style="-fx-background-color: transparent;" text="Договор">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#formDogovor" text="Принятые договоры" />
+               </items>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="btnKassa" mnemonicParsing="false" onAction="#formKassa" style="-fx-background-color: transparent;" text="Касса">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#formKassa" text="Учёт долгов" />
+               </items>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </MenuButton>
+              <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#closeApp" style="-fx-background-color: transparent;" text="Выйти">
+                  <font>
+                      <Font name="Arial Rounded MT Bold" size="14.0" />
+                  </font>
+              </Button>
+            </items>
+        </ToolBar>
+      <ImageView fitHeight="193.0" fitWidth="309.0" layoutX="27.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@loan-transformed.png" />
+         </image>
+      </ImageView>
+    </children>
+
+</AnchorPane>

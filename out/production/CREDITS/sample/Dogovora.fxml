@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5779467680608364" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="528.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Dogovora">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <MenuBar fx:id="fileMenu" prefHeight="27.0" prefWidth="797.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                                <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Exit" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <ScrollPane layoutY="27.0" prefHeight="276.0" prefWidth="797.0">
+                    <content>
+                        <TableView fx:id="dogovorTable" prefHeight="605.0" prefWidth="1350.0">
+                            <columns>
+                                <TableColumn fx:id="colNomer" onEditCommit="#colNomer_OnEditCommit" prefWidth="150.0" text="№ Договора" />
+                                <TableColumn fx:id="colClient" onEditCommit="#colClient_OnEditCommit" prefWidth="300.0" text="ФИО клиента" />
+                                <TableColumn fx:id="colZakluchenie" onEditCommit="#colZakluchenie_OnEditCommit" prefWidth="150.0" text="Дата заключения" />
+                                <TableColumn fx:id="colSumma" onEditCommit="#colSumma_OnEditCommit" prefWidth="150.0" text="Сумма" />
+                                <TableColumn fx:id="colStavka" onEditCommit="#colStavka_OnEditCommit" prefWidth="150.0" text="Процентная ставка" />
+                                <TableColumn fx:id="colSrok" onEditCommit="#colSrok_OnEditCommit" prefWidth="150.0" text="Срок погашения" />
+                                <TableColumn fx:id="colSposob" onEditCommit="#colSposob_OnEditCommit" prefWidth="300.0" text="Способ погашения" />
+                            </columns>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #87CEEB;">
+            <children>
+                <ComboBox fx:id="cbSposob" layoutX="235.0" layoutY="66.0" prefWidth="300.0" promptText="Способ погашения" />
+                <DatePicker fx:id="dpZakluchenie" layoutX="311.0" layoutY="105.0" promptText="Дата заключения" />
+                <TextField fx:id="txfStavka" layoutX="45.0" layoutY="65.0" prefWidth="150.0" promptText="\% Ставка">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfSumma" layoutX="577.0" layoutY="24.0" prefWidth="150.0" promptText="Сумма">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfNomer" layoutX="45.0" layoutY="24.0" prefWidth="150.0" promptText="№ Договора">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfPoisk" layoutX="311.0" layoutY="175.0" prefWidth="300.0" promptText="Поиск...">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfSrok" layoutX="577.0" layoutY="65.0" prefWidth="150.0" promptText="Срок погашения">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="btnAdd" layoutX="652.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleAddButtonClick" text="Добавить">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnClear" layoutX="196.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleClearButtonClick" prefWidth="79.0" text="Стереть">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnDelete" layoutX="81.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleDeleteButtonClick" prefWidth="79.0" text="Удалить">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="txfClient" layoutX="235.0" layoutY="24.0" prefWidth="300.0" promptText="Клиент">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+            </children></AnchorPane>
+    </items>
+</SplitPane>

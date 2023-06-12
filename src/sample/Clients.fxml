@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5071942446043165" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="574.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Clients">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <ScrollPane layoutY="29.0" prefHeight="257.0" prefWidth="892.0">
+                    <content>
+                        <TableView fx:id="clientsTable" prefHeight="800.0" prefWidth="3380.0">
+                            <columns>
+                                <TableColumn fx:id="colFio" onEditCommit="#colFio_OnEditCommit" prefWidth="300.0" text="ФИО" />
+                                <TableColumn fx:id="colGender" onEditCommit="#colGender_OnEditCommit" prefWidth="130.0" text="Пол" />
+                                <TableColumn fx:id="colBirthD" onEditCommit="#colBirthD_OnEditCommit" prefWidth="130.0" text="Дата рождения" />
+                                <TableColumn fx:id="colBirthP" onEditCommit="#colBirthP_OnEditCommit" prefWidth="300.0" text="Место рождения" />
+                                <TableColumn fx:id="colGrajd" onEditCommit="#colGrajd_OnEditCommit" prefWidth="300.0" text="Гражданство" />
+                                <TableColumn fx:id="colSeriya" onEditCommit="#colSeriya_OnEditCommit" prefWidth="130.0" text="Паспорт_серия" />
+                                <TableColumn fx:id="colNomer" onEditCommit="#colNomer_OnEditCommit" prefWidth="130.0" text="Паспорт_номер" />
+                                <TableColumn fx:id="colVidachi" onEditCommit="#colVidachi_OnEditCommit" prefWidth="130.0" text="Дата выдачи" />
+                                <TableColumn fx:id="colVidan" onEditCommit="#colVidan_OnEditCommit" prefWidth="300.0" text="Кем выдан" />
+                                <TableColumn fx:id="colKod" onEditCommit="#colKod_OnEditCommit" prefWidth="130.0" text="Паспорт_код" />
+                                <TableColumn fx:id="colWork" onEditCommit="#colWork_OnEditCommit" prefWidth="300.0" text="Место работы" />
+                                <TableColumn fx:id="colDoljnost" onEditCommit="#colDoljnost_OnEditCommit" prefWidth="300.0" text="Должность" />
+                                <TableColumn fx:id="colPhone" onEditCommit="#colPhone_OnEditCommit" prefWidth="200.0" text="Телефон" />
+                                <TableColumn fx:id="colAdres" onEditCommit="#colAdres_OnEditCommit" prefWidth="300.0" text="Адрес" />
+                                <TableColumn fx:id="colMail" onEditCommit="#colMail_OnEditCommit" prefWidth="300.0" text="Mail" />
+                            </columns>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+                <MenuBar fx:id="fileMenu" prefHeight="25.0" prefWidth="892.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                                <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Exit" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #87CEEB;">
+            <children>
+                <TextField fx:id="txfFIO" layoutX="26.0" layoutY="19.0" prefWidth="270.0" promptText="Фамилия Имя Отчество">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfNomer" layoutX="311.0" layoutY="54.0" prefWidth="150.0" promptText="Паспорт_номер">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfPhone" layoutX="593.0" layoutY="87.0" prefWidth="170.0" promptText="Телефон">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfDoljnost" layoutX="593.0" layoutY="54.0" prefWidth="270.0" promptText="Должность">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfAdres" layoutX="593.0" layoutY="123.0" prefWidth="270.0" promptText="Адрес">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfKod" layoutX="311.0" layoutY="158.0" prefWidth="150.0" promptText="Паспорт_код">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfMail" layoutX="593.0" layoutY="158.0" prefWidth="270.0" promptText="Эл.почта">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfWork" layoutX="593.0" layoutY="20.0" prefWidth="270.0" promptText="Место работы">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfVidan" layoutX="311.0" layoutY="123.0" prefWidth="270.0" promptText="Кем выдан">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfSeriya" layoutX="311.0" layoutY="20.0" prefWidth="150.0" promptText="Паспорт_серия">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txfBirthP" layoutX="26.0" layoutY="123.0" prefWidth="270.0" promptText="Место рождения">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <ComboBox fx:id="cbGender" layoutX="26.0" layoutY="55.0" prefWidth="150.0" promptText="Пол" />
+                <ComboBox fx:id="cbGrajdan" layoutX="26.0" layoutY="159.0" prefWidth="250.0" promptText="Гражданство" />
+                <DatePicker fx:id="dPBirthD" layoutX="26.0" layoutY="88.0" prefWidth="150.0" promptText="Дата рождения" />
+                <DatePicker fx:id="dpVidachi" layoutX="311.0" layoutY="88.0" prefWidth="150.0" promptText="Дата выдачи" />
+                <TextField fx:id="txfPoisk" layoutX="311.0" layoutY="223.0" prefHeight="27.0" prefWidth="270.0" promptText="Поиск...">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="btnAdd" layoutX="217.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleAddButtonClick" text="Добавить">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnClear" layoutX="593.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleClearButtonClick" text="Стереть">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnDelete" layoutX="678.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleDeleteButtonClick" text="Удалить">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children></AnchorPane>
+    </items>
+</SplitPane>
